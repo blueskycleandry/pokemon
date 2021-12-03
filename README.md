@@ -5,20 +5,20 @@ Objectives:
 - provide a front end to view these delightful creatures.
 
 Design criteria:
-- demonstrate some generic stuff
-- get all the data without thinking about it too much
+- get all the data
 	- derive all referential information
-	- currenly some grouping data is not properly extracted.  Information, not data.
+	- currently some grouping data is not properly extracted as information.
 - Provide a way to generically create queries
-	- the data is in a format to do this
-	- implemnetation timed out
+	- the data has been extracted to support this
+	- implementation timed out, so the full answer is not there
 	- sample 'intermediate' query provided
-	- some comments in results.py
+	- some comments in results.py as to how the generic approach would work
 - a simple pair of templates to
 	- run the crawl process
-	- note this get 100 Pokemon by default - edit crawl.py to get more
+		- note this get 100 Pokemon by default - edit crawl.py to get more
 		- future enhancement!
-	- simple listing of ALL Pokemon, it would be nice to add filtering and sorting
+	- get a simple listing of ALL Pokemon.  
+		- It would be nice to add filtering and sorting
 	- and to add dynamic query generation.  Designed but not implemented.
 
 ## Install
@@ -38,7 +38,7 @@ set FLASK_APP=pokemon.py
 $ flask run
 ```
 
-Then enter into your browser http://127.0.0.1:5000
+Then http://127.0.0.1:5000
 
 ## Test
 
@@ -56,7 +56,7 @@ flask db migrate
 flask db upgrade
 ```
 
-And choose to the re-populate button on the home page.
+And choose the re-populate button on the home page.
 
 Edit MAXIMUM_EXTRACT in crawl.py to change how many little critters come back.
-The deployed DB was populated with this set effectively to infinity - somewhere a bit over a thousand. 
+The deployed DB was populated with this set effectively to infinity - somewhere a bit over a thousand.
