@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Pokemon Properties</title>
+</head>
+<header>
+  <div class="container">
+	<h1 class="logo">Pokemon Properties</h1>
+	<strong><nav>
+	  <ul class="menu">
+		<li><a href="{{ url_for('index') }}">Home</a></li>
+	  </ul>
+	</nav></strong>
+  </div>
+</header>
+<body>
+<style>
+ td {
+        width: 175px;
+        text-align: left;
+      }
+</style>
+<table>
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Species</th>
+        <th>Height</th>
+        <th>Sprite</th>
+        <th>Stats</th>
+        <th>Abilities</th>
+    </tr>
+    </thead>    
+    <tbody>
+        {% for row in data %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+				<td><img src={{row[4]}} alt={{row[1]}}></td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

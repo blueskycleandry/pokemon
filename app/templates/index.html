@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<header>
+  <div class="container">
+	<h1 class="logo">Pokemon Properties</h1>
+	<strong><nav>
+	  <ul class="menu">
+		<li><a href="{{ url_for('properties') }}">List Pokemon Properties</a></li>
+		<li><a href="{{ url_for('crawl') }}">Clear the old stock and catch revived Pokemon</a></li>
+		<li>Note, WIP - Count is set at 100.  Edit MAXIMUM_EXTRACT in crawl.py to change.  And sorry, not random</li>
+	  </ul>
+	</nav></strong>
+  </div>
+</header>
+{% if crawl_count != 0 %}
+    <h1 class="logo">We've caught and held {{crawl_count}} Pokemon and their Properties</h1>
+{% endif %}
+</body>
+</html>
